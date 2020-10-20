@@ -5,7 +5,7 @@ const Y_AXIS = 1;
 const X_AXIS = 2;
 let b1, b2, c1, c2;
 var width=(Math.random()*500)+100;
-var height2=Math.random();
+var decimal=Math.random();
 var sides=10;
 var y2=1;
 function setup() {
@@ -18,7 +18,7 @@ function setup() {
    b2 = color(0);
    c1 = color(204, 102, 0);
    c2 = color(0, 102, 153);
-   noLoop();
+   //noLoop();
 //apples
   for (let i = 10; i < width; i += 10) {
     // If 'i' divides by 20 with no remainder draw the first line
@@ -31,15 +31,54 @@ function setup() {
       line(i, 20, i, 180);
     }
   }
+  for (let y=110; y<120; y+=1){
+    noFill();
+    stroke(0);
+    push();
+    translate(500, height * decimal, width);
+    sphere(300);
+    pop();
+  }
+  background(250);
+  rotateY(frameCount * 0.01);
+
+
 }
 
 function draw() {
   y=y+1;
   x=x+1;
   n=n+1;
+
+  stroke(0);
+  for (let j = 0; j < 5; j++) {
+    push();
+    for (let i = 0; i < 80; i++) {
+      translate(
+        sin(frameCount * 0.001 + j) * 50,
+        sin(frameCount * 0.001 + j) * 10,
+        i * 0.1
+      );
+      rotateZ(frameCount * 0.002);
+      push();
+      sphere(8, 6, 4);
+      pop();
+    }
+    pop();
+  }
+
+  noFill();
+  stroke(0);
   push();
+  rotate(frameCount / -20000.0);
   translate(width * 0,2, height * 0.5);
-  polygon(100,100,9,1000);
+  polygon(100,100,9,5);
+  pop();
+
+  push();
+  translate(width * 0.2, height * 0.5);
+  rotate(frameCount / 200.0);
+  polygon(2000, 2000, 82, 3);
   pop();
 
   if (y<0) {
@@ -57,14 +96,7 @@ function draw() {
   rotateX(-0.9);
   box(100);
   pop();
-  if (y<110){
-    noFill();
-    stroke(0);
-    push();
-    translate(500, height * height2, width);
-    sphere(300);
-    pop();
-  }
+
   noFill();
   stroke(0);
   push();
@@ -132,9 +164,9 @@ function setGradient(x, y, w, h, c1, c2, axis) {
     }
   }
 }
-function mousePressed() {
-  redraw();
-}
+//function mousePressed() {
+//  redraw();
+//}
   // put drawing code here
 //  for (var i=0; i=n; i++){
 //    line(100,100,1000,n);
