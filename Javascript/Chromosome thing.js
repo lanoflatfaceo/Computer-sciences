@@ -18,19 +18,19 @@ if (isDog===true) {
     println(1.8 * restingEnergyReq);
   }
 
-} elseif(isCat===true) {//cat
+} if(isCat===true) {//cat
   if (isNeutered){
     println(1.2 * restingEnergyReq);
     }else{
       println(1.4 *restingEnergyReq);
     }
-} elseif(isElephant===true){
+} if(isElephant===true){
     if(isNeutered) {
       println(2.3 * restingEnergyReq);
     } else {
         println(2.5 * restingEnergyReq);
     }
-} elseif(isAlligator){
+} if(isAlligator){
     if(isNeutered) {
       println(2* restingEnergyReq);
     } else{
