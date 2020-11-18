@@ -18,8 +18,16 @@ var a = Math.floor(Math.random()*10);
       print("you got it" + " " + " it was" + answer + "!");
       break;
 
-    } else{
-      print("You did not get it"); 
+    }
+    if (a < answer) {
+        print("You are more than the secret number")
+    }
+    if (a > answer) {
+        print("You are less than the secret number")
+    }
+
+    else{
+      print("You did not get it");
     }
 
   }
