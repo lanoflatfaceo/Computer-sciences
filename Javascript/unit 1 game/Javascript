@@ -11,12 +11,13 @@ function draw() {
 //repeats until the user gets it right
 function guessinggame(){
 
+var answer=0;
 var a = Math.floor(Math.random()*10);
-  while(a){
+  while(a != answer){
     answer  = prompt("what is your guess?");
     if (a == answer) {
-      print("you got it" + " " + " it was" + answer + "!");
-      break;
+      print("you got it" + " " + " it was" + " " + answer + "!");
+
 
     }
     if (a < answer) {
@@ -26,9 +27,9 @@ var a = Math.floor(Math.random()*10);
         print("You are less than the secret number")
     }
 
-    else{
-      print("You did not get it");
-    }
+  //  else{
+    //  print("You did not get it");
+  //  }
 
   }
 }
