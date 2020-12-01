@@ -55,7 +55,7 @@ function draw() {
     push();
     for (let i = 0; i < 80; i++) {
       translate(
-        sin(frameCount * 0.001 + j) * 50,
+        sin(frameCount * 0.001 + j) * 40,
         sin(frameCount * 0.001 + j) * 10,
         i * 0.1
       );
