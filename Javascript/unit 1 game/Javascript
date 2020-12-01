@@ -13,8 +13,8 @@ function guessinggame(){
 
 var answer=0;
 var a = Math.floor(Math.random()*10);
+answer  = prompt("what is your guess?");
   while(a != answer){
-    answer  = prompt("what is your guess?");
     if (a < answer) {
         answer = prompt("You are more than the secret number")
     }
