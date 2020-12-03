@@ -39,6 +39,26 @@ function greet() {
 for(var i =0; i<conversation.length; i++) {
   print(conversation[i]);
   a= createElement('p' , conversation[i]);
+  a.position(20,(100+20*i));
+}
+for(var b=0; b<shoppinglist.length; b++){
+ // push();
+  print(shoppinglist[b]);
+
+  s = createElement('p' , shoppinglist[b]);
+  s.position(20,(175+20*b));
+  //pop();
+
+
+}
+
+  print("Ok, let's go then");
+}
+
+
+for(var i =0; i<conversation.length; i++) {
+  print(conversation[i]);
+  a= createElement('p' , conversation[i]);
 //a.position(20,500);
 }
 for(var b=0; b<shoppinglist.length; b++){
